@@ -1,0 +1,31 @@
+body {
+	background-color: #242582;
+	font-family: Apple Chancery, cursive;
+}
+.Heading {
+	color: #66fcf1;
+	text-align: center;
+}
+.display {
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 10px;
+}
+.card {
+	margin-left: 40px;
+}
+.phone {
+	line-height: 1.5;
+	height: auto;
+	border-style: solid;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+	box-sizing: border-box;
+	border-color: white;
+	color: black;
+	background-color: white;
+}
+.home_grid {
+	margin-bottom: 15px;
+}

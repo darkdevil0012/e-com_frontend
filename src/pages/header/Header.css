@@ -1,0 +1,37 @@
+.heading_main {
+	color: #66fcf1;
+}
+.Headings {
+	display: flex;
+}
+.sub_heading {
+	color: white;
+}
+.sub_heading:hover {
+	color: #66fcf1;
+}
+
+.Links {
+	margin-right: 25px;
+}
+h3 {
+	margin-left: 10px;
+}
+.container {
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -7px;
+	display: flex;
+	justify-content: space-between;
+	/* background-color: darkblue; */
+}
+.badge {
+	margin-top: 15px;
+	margin-right: 30px;
+}
+.link {
+	text-decoration: none;
+}
+.carticon {
+	color: white;
+}

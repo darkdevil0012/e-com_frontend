@@ -1,0 +1,26 @@
+.Heading {
+	margin-bottom: 50px;
+}
+.detail_page {
+	border-radius: 15px;
+	border-style: solid;
+	border-color: gray;
+	margin-left: 20px;
+	text-align: center;
+	background-color: white;
+	height: 250px;
+	width: 300px;
+}
+.product_details {
+	color: #66fcf1;
+}
+.product_container {
+	margin-left: 20px;
+}
+img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.singleproduct_icon {
+	color: #66fcf1;
+}

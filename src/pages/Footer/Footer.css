@@ -1,0 +1,27 @@
+.footer {
+	display: flex;
+	justify-content: end;
+	gap: 20px;
+}
+.footer_heading {
+	color: white;
+}
+
+h4 {
+	color: #66fcf1;
+}
+
+.footer_heading:hover {
+	color: #66fcf1;
+}
+.footer_main {
+	display: flex;
+	justify-content: space-between;
+	/* background-color: black; */
+}
+.sticky_footer {
+	position: sticky;
+	top: 100%;
+	display: flex;
+	justify-content: space-between;
+}

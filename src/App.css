@@ -1,0 +1,12 @@
+/* html {
+	height: 100%;
+} */
+.page-container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-wrap {
+	flex: 1;
+}

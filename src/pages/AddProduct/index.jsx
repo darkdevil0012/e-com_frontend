@@ -22,7 +22,7 @@ const AddProduct = () => {
 		formData.append("image", file);
 		//"http://localhost:8000/upload"
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/upload",
+			"https://wild-lime-hatchling-tux.cyclic.cloud/upload",
 			{
 				method: "POST",
 				body: formData,
@@ -31,7 +31,7 @@ const AddProduct = () => {
 
 		const data = await response.json();
 		//"http://localhost:8000/"
-		const img_path = "https://elegant-bracelet-bear.cyclic.cloud/" + data.path;
+		const img_path = "https://wild-lime-hatchling-tux.cyclic.cloud/" + data.path;
 		setImage(img_path);
 	};
 
@@ -61,7 +61,7 @@ const AddProduct = () => {
 		};
 		//http://localhost:8000
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/products/add",
+			"https://wild-lime-hatchling-tux.cyclic.cloud/products/add",
 			{
 				method: "POST",
 				headers: {

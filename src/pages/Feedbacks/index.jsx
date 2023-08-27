@@ -10,7 +10,7 @@ const Feedback = () => {
 		setLoading(true);
 		//http://localhost:8000
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/feedback/allfeedbacks"
+			"https://wild-lime-hatchling-tux.cyclic.cloud/feedback/allfeedbacks"
 		);
 		const data = await response.json();
 		setFeedback(data.feedbacks);

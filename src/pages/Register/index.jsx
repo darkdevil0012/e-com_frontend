@@ -30,7 +30,7 @@ const Register = () => {
 
 		//http://localhost:8000
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/users/register",
+			"https://wild-lime-hatchling-tux.cyclic.cloud/users/register",
 			{
 				method: "POST",
 				headers: {

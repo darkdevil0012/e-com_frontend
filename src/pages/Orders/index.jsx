@@ -7,9 +7,13 @@ const Orders = () => {
 
 	const fetchorders = async () => {
 		setLoading(true);
-		//http://localhost:8000
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/orders/allorders"
+			"https://wild-lime-hatchling-tux.cyclic.cloud/orders/allorders",
+			{
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
 		);
 		const data = await response.json();
 		setOrders(data.orders);

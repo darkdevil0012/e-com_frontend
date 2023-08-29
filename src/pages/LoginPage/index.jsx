@@ -28,9 +28,8 @@ const LoginPage = () => {
 			password,
 		};
 
-		//http://localhost:8000
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/users/login",
+			"https://wild-lime-hatchling-tux.cyclic.cloud/users/login",
 			{
 				method: "POST",
 				headers: {

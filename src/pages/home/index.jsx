@@ -18,9 +18,13 @@ const Home = () => {
 
 	const fetchproduct = async () => {
 		setLoading(true);
-		//http://localhost:8000
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/products/Allproducts"
+			"https://wild-lime-hatchling-tux.cyclic.cloud/products/Allproducts",
+			{
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
 		);
 		const data = await response.json();
 		setProducts(data.product);

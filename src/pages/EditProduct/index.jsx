@@ -23,9 +23,13 @@ const EditProduct = () => {
 		});
 	};
 	const fetchProduct = async () => {
-		//http://localhost:8000
 		const response = await fetch(
-			`https://elegant-bracelet-bear.cyclic.cloud/products/${id}`
+			`https://wild-lime-hatchling-tux.cyclic.cloud/products/${id}`,
+			{
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
 		);
 		const data = await response.json();
 		setTest(data.product);
@@ -41,9 +45,8 @@ const EditProduct = () => {
 
 	const handleSubmit = async () => {
 		const productData = { ...test };
-		//http://localhost:8000
 		const response = await fetch(
-			`https://elegant-bracelet-bear.cyclic.cloud/products/edit/${id}`,
+			`https://wild-lime-hatchling-tux.cyclic.cloud/products/edit/${id}`,
 			{
 				method: "PUT",
 				headers: {

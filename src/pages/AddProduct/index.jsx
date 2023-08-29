@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Snackbar from "@mui/material/Snackbar";
+import Axios from "axios";
 
 const AddProduct = () => {
 	const navgiate = useNavigate();
@@ -19,20 +20,15 @@ const AddProduct = () => {
 	const handleUpload = async (ev) => {
 		const file = ev.target.files[0];
 		const formData = new FormData();
-		formData.append("image", file);
-		//"http://localhost:8000/upload"
-		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/upload",
-			{
-				method: "POST",
-				body: formData,
-			}
-		);
+		formData.append("file", file);
+		formData.append("upload_preset", "e_com_web");
 
-		const data = await response.json();
-		//"http://localhost:8000/"
-		const img_path = "https://elegant-bracelet-bear.cyclic.cloud/" + data.path;
-		setImage(img_path);
+		Axios.put(
+			"https://api.cloudinary.com/v1_1/dnqplq5hb/image/upload",
+			formData
+		).then((resp) => {
+			setImage(resp.data.url);
+		});
 	};
 
 	const handleChange = (ev) => {
@@ -59,9 +55,9 @@ const AddProduct = () => {
 			description,
 			image,
 		};
-		//http://localhost:8000
+
 		const response = await fetch(
-			"https://elegant-bracelet-bear.cyclic.cloud/products/add",
+			"https://wild-lime-hatchling-tux.cyclic.cloud/products/add",
 			{
 				method: "POST",
 				headers: {

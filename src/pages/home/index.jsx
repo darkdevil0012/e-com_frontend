@@ -19,12 +19,16 @@ const Home = () => {
 	const fetchproduct = async () => {
 		setLoading(true);
 		const response = await fetch(
+<<<<<<< HEAD
 			"https://wild-lime-hatchling-tux.cyclic.cloud/products/Allproducts",
 			{
 				headers: {
 					"Content-Type": "application/json",
 				},
 			}
+=======
+			"https://wild-lime-hatchling-tux.cyclic.cloud/products/Allproducts"
+>>>>>>> 53a56b3f9da0be78126974d88948e1c38c8986fc
 		);
 		const data = await response.json();
 		setProducts(data.product);

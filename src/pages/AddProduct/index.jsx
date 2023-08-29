@@ -20,6 +20,7 @@ const AddProduct = () => {
 	const handleUpload = async (ev) => {
 		const file = ev.target.files[0];
 		const formData = new FormData();
+<<<<<<< HEAD
 		formData.append("file", file);
 		formData.append("upload_preset", "e_com_web");
 
@@ -29,6 +30,22 @@ const AddProduct = () => {
 		).then((resp) => {
 			setImage(resp.data.url);
 		});
+=======
+		formData.append("image", file);
+		//"http://localhost:8000/upload"
+		const response = await fetch(
+			"https://wild-lime-hatchling-tux.cyclic.cloud/upload",
+			{
+				method: "POST",
+				body: formData,
+			}
+		);
+
+		const data = await response.json();
+		//"http://localhost:8000/"
+		const img_path = "https://wild-lime-hatchling-tux.cyclic.cloud/" + data.path;
+		setImage(img_path);
+>>>>>>> 53a56b3f9da0be78126974d88948e1c38c8986fc
 	};
 
 	const handleChange = (ev) => {

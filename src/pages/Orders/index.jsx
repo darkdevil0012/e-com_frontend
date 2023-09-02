@@ -8,16 +8,12 @@ const Orders = () => {
 	const fetchorders = async () => {
 		setLoading(true);
 		const response = await fetch(
-<<<<<<< HEAD
 			"https://wild-lime-hatchling-tux.cyclic.cloud/orders/allorders",
 			{
 				headers: {
 					"Content-Type": "application/json",
 				},
 			}
-=======
-			"https://wild-lime-hatchling-tux.cyclic.cloud/orders/allorders"
->>>>>>> 53a56b3f9da0be78126974d88948e1c38c8986fc
 		);
 		const data = await response.json();
 		setOrders(data.orders);

@@ -52,8 +52,11 @@ const CheckOut = () => {
 			}
 		);
 		const data = await response.json();
-
-		console.log(data);
+		setEmail("");
+		setAddress("");
+		setPhoneNumber("");
+		setName("");
+		navgiate("/thankyou");
 	};
 
 	useEffect(() => {

@@ -24,16 +24,12 @@ const Product_detail = () => {
 	const fetchSingleProduct = async () => {
 		setLoading(true);
 		const response = await fetch(
-<<<<<<< HEAD
 			`https://wild-lime-hatchling-tux.cyclic.cloud/products/${id}`,
 			{
 				headers: {
 					"Content-Type": "application/json",
 				},
 			}
-=======
-			`https://wild-lime-hatchling-tux.cyclic.cloud/products/${id}`
->>>>>>> 53a56b3f9da0be78126974d88948e1c38c8986fc
 		);
 		const data = await response.json();
 		setTest(data.product);
@@ -43,16 +39,12 @@ const Product_detail = () => {
 
 	const deleteSingleProduct = async () => {
 		const response = await fetch(
-<<<<<<< HEAD
 			`https://wild-lime-hatchling-tux.cyclic.cloud/products/delete/${id}`,
 			{
 				headers: {
 					"Content-Type": "application/json",
 				},
 			}
-=======
-			`https://wild-lime-hatchling-tux.cyclic.cloud/products/delete/${id}`
->>>>>>> 53a56b3f9da0be78126974d88948e1c38c8986fc
 		);
 		const data = await response.json();
 		setMessage(data.message);
